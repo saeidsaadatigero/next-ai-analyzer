@@ -27,7 +27,7 @@ The **Next AI** project is a fundamental analysis tool for evaluating projects t
 1. **Clone the Project Repository**:
    Start by cloning the project repository:
    ```bash
-   git clone https://github.com/your-repo/next-ai-analyzer.git
+   https://github.com/saeidsaadatigero/next-ai-analyzer.git
    cd next-ai-analyzer
    ```
 
