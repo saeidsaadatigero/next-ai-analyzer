@@ -1,3 +1,34 @@
+# Next AI Project Analyzer
+
+Next AI is a project analysis tool that evaluates the fundamental aspects of different projects by utilizing machine learning, natural language processing (NLP), and predefined prompts. The tool helps in determining the potential success and risks associated with a project by analyzing different key factors such as team strength, tokenomics, and more.
+
+## Table of Contents
+
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Components](#components)
+5. [Caching Mechanism](#caching-mechanism)
+6. [Contributing](#contributing)
+
+---
+
+## Features
+
+- **Fundamental Analysis**: Evaluates different fundamental factors like Team, Tokenomics, Developers' Activity, Roadmap, etc.
+- **API Integration**: Utilizes OpenAI and Tavily APIs for NLP-based project analysis.
+- **Caching**: Efficient caching system to avoid repeated calculations for the same project.
+- **Interactive UI**: Streamlit-based user interface for easy interaction.
+- **Data Visualization**: Uses Plotly for generating interactive charts such as spider charts and gauges.
+
+## Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-repo/next-ai-analyzer.git
+   cd next-ai-analyzer
+
+
 # پروژه تحلیل‌گر Next AI
 
 پروژه **Next AI** یک ابزار تحلیل فاندامنتال برای ارزیابی پروژه‌ها است
