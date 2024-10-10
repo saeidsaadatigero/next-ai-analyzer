@@ -7,10 +7,10 @@ import time
 
 class Chatbot:
     def __init__(self):
-        # Initialize OpenAI and Tavily clients
-        self.client = OpenAI(api_key='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')
-        self.tavily_client = TavilyClient(api_key='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')
-        self.assistant = self.client.beta.assistants.retrieve('asst_Bhy9E45vGj0Bc97ZZ3SUN67u')
+        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.tavily_client = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
+        self.assistant = self.client.beta.assistants.retrieve(os.getenv("ASSISTANT_ID"))
+
 
     def tavily_search(self, query):
         search_result = self.tavily_client.get_search_context(query, search_depth="advanced", max_tokens=8000)
