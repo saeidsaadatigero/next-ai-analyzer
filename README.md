@@ -1,130 +1,97 @@
-# Next AI Project Analyzer
+# Next AI Analyzer Project
 
-Next AI is a project analysis tool that evaluates the fundamental aspects of different projects by utilizing machine learning, natural language processing (NLP), and predefined prompts. The tool helps in determining the potential success and risks associated with a project by analyzing different key factors such as team strength, tokenomics, and more.
+The **Next AI** project is a fundamental analysis tool for evaluating projects that utilizes machine learning and natural language processing (NLP) to analyze various data and inputs. This tool examines key factors such as the team, tokenomics, developer activity, and other important criteria to determine the success potential and associated risks of projects.
 
 ## Table of Contents
 
 1. [Features](#features)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Components](#components)
+2. [Installation and Setup](#installation-and-setup)
+3. [Usage Instructions](#usage-instructions)
+4. [Project Components](#project-components)
 5. [Caching Mechanism](#caching-mechanism)
-6. [Contributing](#contributing)
+6. [Contributing to Development](#contributing-to-development)
+7. [License](#license)
 
 ---
 
 ## Features
 
-- **Fundamental Analysis**: Evaluates different fundamental factors like Team, Tokenomics, Developers' Activity, Roadmap, etc.
-- **API Integration**: Utilizes OpenAI and Tavily APIs for NLP-based project analysis.
-- **Caching**: Efficient caching system to avoid repeated calculations for the same project.
-- **Interactive UI**: Streamlit-based user interface for easy interaction.
-- **Data Visualization**: Uses Plotly for generating interactive charts such as spider charts and gauges.
+- **Fundamental Analysis**: Evaluates various fundamental factors such as team, tokenomics, developer activity, roadmap, etc.
+- **API Integration**: Utilizes OpenAI and Tavily APIs for NLP-based analyses.
+- **Caching**: An efficient caching system to prevent redundant processing and improve performance speed.
+- **Interactive User Interface**: Built on Streamlit for easy interaction with users.
+- **Data Visualization**: Uses Plotly to create interactive charts like spider and gauge charts.
 
-## Installation
+## Installation and Setup
 
-1. **Clone the repository**:
+1. **Clone the Project Repository**:
+   Start by cloning the project repository:
    ```bash
    git clone https://github.com/your-repo/next-ai-analyzer.git
    cd next-ai-analyzer
+   ```
 
+2. **Install Required Libraries**:
+   Use pip to install the project dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-# پروژه تحلیل‌گر Next AI
+3. **Run the Application**:
+   After installing the dependencies, you can run the application using Streamlit:
+   ```bash
+   streamlit run main.py
+   ```
 
-پروژه **Next AI** یک ابزار تحلیل فاندامنتال برای ارزیابی پروژه‌ها است
-که از یادگیری ماشین و پردازش زبان طبیعی (NLP) برای تحلیل اطلاعات و ورودی‌های مختلف استفاده می‌کند.
-این ابزار به بررسی عوامل کلیدی پروژه‌ها مانند تیم، توکنومیکس، فعالیت توسعه‌دهندگان
-و سایر فاکتورهای مهم می‌پردازد و میزان موفقیت و ریسک‌های مرتبط با پروژه‌ها را تعیین می‌کند.
+4. **Set API Keys**:
+   To use OpenAI and Tavily APIs, replace the default values with your API keys in the `internet_openai_chat.py` file:
+   ```python
+   self.client = OpenAI(api_key='your-OpenAI-API-key')
+   self.tavily_client = TavilyClient(api_key='your-Tavily-API-key')
+   ```
 
-## فهرست مطالب
+## Usage Instructions
 
-1. [ویژگی‌ها](#ویژگی‌ها)
-2. [نصب و راه‌اندازی](#نصب-و-راه‌اندازی)
-3. [نحوه استفاده](#نحوه-استفاده)
-4. [اجزای پروژه](#اجزای-پروژه)
-5. [مکانیزم کشینگ](#مکانیزم-کشینگ)
-6. [مشارکت در توسعه](#مشارکت-در-توسعه)
-7. [لایسنس](#لایسنس)
+1. **Enter Project Name**: Type the name of the desired project in the text box.
+2. **Analyze the Project**: Click on the "Analyze Project" button to start the analysis process. If the project has been previously analyzed, results will be loaded from the cache.
+3. **View Analysis Results**: The analysis results will include a final success score for the project (on a scale from 0 to 100) and scores related to different categories like team, tokenomics, etc.
+4. **Visualize Results**: The analysis results will be displayed as interactive charts such as spider charts and gauge charts.
 
----
-
-## ویژگی‌ها
-
-- **تحلیل فاندامنتال**: ارزیابی عوامل فاندامنتال مختلف نظیر تیم، توکنومیکس، فعالیت توسعه‌دهندگان، نقشه راه (Roadmap) و غیره.
-- **یکپارچگی با API‌ها**: استفاده از APIهای OpenAI و Tavily برای انجام تحلیل‌های مبتنی بر NLP.
-- **کشینگ**: سیستم کشینگ کارآمد برای جلوگیری از پردازش‌های تکراری و افزایش سرعت عملکرد.
-- **رابط کاربری تعاملی**: استفاده از رابط کاربری مبتنی بر Streamlit برای تعامل آسان با کاربر.
-- **بصری‌سازی داده‌ها**: استفاده از Plotly برای ایجاد نمودارهای تعاملی مانند نمودارهای عنکبوتی و گیج.
-
-## نصب و راه‌اندازی
-
-1. **کلون کردن مخزن پروژه**:
-    ابتدا مخزن پروژه را کلون کنید:
-    ```bash
-    git clone https://github.com/your-repo/next-ai-analyzer.git
-    cd next-ai-analyzer
-    ```
-
-2. **نصب کتابخانه‌های مورد نیاز**:
-    از pip برای نصب وابستگی‌های پروژه استفاده کنید:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **اجرای برنامه**:
-    پس از نصب وابستگی‌ها، می‌توانید برنامه را با استفاده از Streamlit اجرا کنید:
-    ```bash
-    streamlit run main.py
-    ```
-
-4. **تنظیم کلیدهای API**:
-    برای استفاده از APIهای OpenAI و Tavily، باید کلیدهای API خود را جایگزین مقادیر پیش‌فرض کنید. در فایل `internet_openai_chat.py`، مقادیر زیر را با کلیدهای API خود جایگزین کنید:
-    ```python
-    self.client = OpenAI(api_key='کلید-API-OpenAI-شما')
-    self.tavily_client = TavilyClient(api_key='کلید-API-Tavily-شما')
-    ```
-
-## نحوه استفاده
-
-1. **ورود نام پروژه**: نام پروژه موردنظر را در باکس متنی وارد کنید.
-2. **تحلیل پروژه**: با کلیک بر روی دکمه "تحلیل پروژه"، فرآیند تحلیل آغاز می‌شود. اگر پروژه قبلاً تحلیل شده باشد، نتایج از کش بارگذاری می‌شود.
-3. **مشاهده نتایج تحلیل**: نتایج تحلیل شامل نمره نهایی موفقیت پروژه (در بازه 0 تا 100) و امتیازات مربوط به دسته‌بندی‌های مختلف مانند تیم، توکنومیکس و غیره خواهد بود.
-4. **بصری‌سازی نتایج**: نتایج تحلیل به صورت نمودارهای تعاملی مانند نمودار عنکبوتی (Spider Chart) و نمودار گیج (Gauge Chart) نمایش داده می‌شود.
-
-## اجزای پروژه
+## Project Components
 
 1. **`main.py`**:
-    - این فایل اصلی پروژه است که رابط کاربری مبتنی بر Streamlit را اجرا کرده و ورودی‌های کاربر را پردازش می‌کند. این فایل با بخش‌های پشتیبان پروژه برای تحلیل و ذخیره‌سازی نتایج در کش در تعامل است.
+   - This is the main file of the project that runs the Streamlit user interface and processes user inputs. It interacts with the backend components of the project for analysis and caching results.
 
 2. **`internet_openai_chat.py`**:
-    - این فایل ارتباط با APIهای OpenAI و Tavily را مدیریت می‌کند. از این سرویس‌ها برای جمع‌آوری اطلاعات و تحلیل پروژه‌ها استفاده می‌شود.
+   - This file manages the connection to the OpenAI and Tavily APIs. These services are utilized for gathering information and analyzing projects.
 
 3. **`fundamental_analysis.py`**:
-    - شامل منطق تحلیل فاندامنتال پروژه‌ها است. دسته‌بندی‌هایی مانند "Team"، "Tokenomics" و سایر عوامل در این فایل تعریف شده و پروژه‌ها بر اساس امتیازات به هر دسته تحلیل می‌شوند.
+   - This file contains the logic for conducting fundamental analysis of projects. Categories such as "Team," "Tokenomics," and other factors are defined here, and projects are analyzed based on scores for each category.
 
 4. **`prompts_text.py`**:
-    - شامل پرسش‌های پیش‌فرضی است که برای استخراج اطلاعات مربوط به پروژه‌ها و انجام تحلیل‌ها به کار می‌رود.
+   - This file includes default prompts used to extract information related to projects and perform analyses.
 
 5. **`streamviz.py`**:
-    - مسئول بصری‌سازی داده‌ها است و با استفاده از کتابخانه Plotly نمودارهای تعاملی ایجاد می‌کند.
+   - Responsible for visualizing data, it uses the Plotly library to create interactive charts.
 
-## مکانیزم کشینگ
+## Caching Mechanism
 
-برای جلوگیری از پردازش مجدد پروژه‌هایی که قبلاً تحلیل شده‌اند، یک مکانیزم کشینگ پیاده‌سازی شده است:
+To prevent reprocessing projects that have been previously analyzed, a caching mechanism has been implemented:
 
-1. **پوشه کش**: پوشه‌ای به نام `cache` برای ذخیره‌سازی نتایج تحلیل پروژه‌ها ایجاد می‌شود. این داده‌ها با استفاده از `joblib` ذخیره و بارگذاری می‌شوند.
-2. **بارگذاری از کش**: زمانی که نام یک پروژه وارد می‌شود، برنامه ابتدا بررسی می‌کند که آیا نتیجه تحلیل قبلی آن پروژه در کش وجود دارد یا خیر. اگر داده‌های کش موجود باشد، به جای اجرای تحلیل جدید، نتایج قبلی بارگذاری می‌شود.
-3. **ذخیره در کش**: اگر داده‌های مربوط به پروژه‌ای در کش موجود نباشد، تحلیل انجام شده و نتیجه در کش ذخیره می‌شود.
+1. **Cache Folder**: A folder named `cache` is created to store the analysis results of projects. This data is stored and loaded using `joblib`.
+2. **Loading from Cache**: When a project name is entered, the program first checks if the previous analysis result for that project exists in the cache. If cached data is available, previous results are loaded instead of executing a new analysis.
+3. **Storing in Cache**: If no cached data exists for a project, the analysis is performed, and the result is stored in the cache.
 
-### توابع کشینگ:
+### Caching Functions:
 
-- `load_cache(project_name)`: نتایج کش‌شده برای یک پروژه خاص را بارگذاری می‌کند.
-- `save_cache(project_name, data)`: نتایج تحلیل پروژه را در کش ذخیره می‌کند.
+- `load_cache(project_name)`: Loads cached results for a specific project.
+- `save_cache(project_name, data)`: Stores the analysis results of a project in the cache.
 
-## مشارکت در توسعه
+## Contributing to Development
 
-اگر مایل به مشارکت در توسعه این پروژه هستید، می‌توانید مخزن را فورک کرده و درخواست تغییرات خود را ارسال کنید. لطفاً در هنگام ارسال درخواست‌ها، نکات مربوط به سبک کدنویسی و تست‌ها را رعایت کنید.
+If you wish to contribute to the development of this project, you can fork the repository and submit your change requests. Please observe coding style and testing guidelines when submitting requests.
 
-## لایسنس
+## License
 
-این پروژه تحت مجوز MIT منتشر شده است. برای جزئیات بیشتر به فایل [LICENSE](./LICENSE) مراجعه کنید.
+This project is published under the MIT License. For more details, please refer to the [LICENSE](./LICENSE) file.
+```
