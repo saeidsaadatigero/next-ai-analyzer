@@ -1,0 +1,9 @@
+plotly==5.22.0
+streamviz==5.1
+tavily-python==0.3.4
+openai==1.35.14
+streamlit==1.36.0
+pandas==2.2.2
+stqdm==0.0.5
+joblib== 1.4.2
+pytest==8.3.3
